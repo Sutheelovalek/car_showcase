@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Fragment } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
+import { generateCarImageUrl } from "@/utils";
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -72,7 +73,7 @@ const CarDetails = ({ isOpen, closeModel, car }: CarDetailsProps) => {
                         px-[22%]"
                     >
                       <Image
-                        src="/hero.png"
+                        src={generateCarImageUrl(car,'angle')}
                         width={250}
                         height={250}
                         alt="car model"
@@ -82,7 +83,7 @@ const CarDetails = ({ isOpen, closeModel, car }: CarDetailsProps) => {
                     <div className="flex gap-3">
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car,'29')}
                           width={250}
                           height={250}
                           alt="car model"
@@ -91,7 +92,7 @@ const CarDetails = ({ isOpen, closeModel, car }: CarDetailsProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car,'33')}
                           width={250}
                           height={250}
                           alt="car model"
@@ -100,7 +101,7 @@ const CarDetails = ({ isOpen, closeModel, car }: CarDetailsProps) => {
                       </div>
                       <div className="flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg">
                         <Image
-                          src="/hero.png"
+                          src={generateCarImageUrl(car,'13')}
                           width={250}
                           height={250}
                           alt="car model"
