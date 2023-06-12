@@ -29,7 +29,6 @@ const SearchBar = () => {
       if(manufacturer === '' && model === '') {
         return alert('Please fill in the search bar')
       } 
-
       updateSearchParams(
         model.toLowerCase(), 
         model.toUpperCase());
@@ -54,8 +53,6 @@ const SearchBar = () => {
         const newPathName = `${window.location.pathname}?${searchParams.toString()}`
 
         router.push(newPathName)
-
-
       }
 
   return (
